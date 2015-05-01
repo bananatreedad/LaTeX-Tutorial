@@ -1,0 +1,40 @@
+% das Papierformat zuerst
+\documentclass[a4paper, 11pt]{article}
+
+% deutsche Silbentrennung
+\usepackage[ngerman]{babel}
+
+% wegen deutschen Umlauten
+\usepackage[utf8]{inputenc}
+
+% hier beginnt das Dokument
+\begin{document}
+
+\section{Abschnitt}
+\label{sec:abschnitt}
+
+\subsection{Unterabschnitt}
+\label{subsec:unterabschnitt}
+
+Einzelne Worte kann man \emph{hervorheben}. Man sollte dieses Mittel aber sehr
+sparsam einsetzen. In diesem Beispiel soll es aber um
+Fußnoten\footnote{\label{foot:1}Dies ist jetzt eine Fußnote.} gehen.
+
+% neue Seite
+\newpage
+
+\section{Weiterer Abschnitt}
+
+\subsection{Weiterer Unterabschnitt}
+
+Weiterhin soll in diesem Beispiel erwähnt sein, wie man Verweise auf andere
+Abschnitte erstellt, also z.~B. auf Abschnitt \ref{sec:abschnitt} auf Seite
+\pageref{sec:abschnitt}. Dabei ist es natürlich wichtig, dass man die Labels
+richtig setzt. So gibt es natürlich auch noch
+Unterabschnitt\footnote{\label{foot:2}Und dies ist natürlich auch eine Fußnote.}
+\ref{subsec:unterabschnitt} auf Seite \pageref{subsec:unterabschnitt}. Man kann
+natürlich auch auf Fußnoten wie Fußnote \ref{foot:1} auf Seite \pageref{foot:1}
+und Fußnote \ref{foot:2} auf Seite \pageref{foot:2} verweisen.
+
+% das ist wohl jetzt das Ende des Dokumentes
+\end{document}
